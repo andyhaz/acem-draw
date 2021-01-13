@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		973476FD25AA41EF009E7102 /* cssTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973476FC25AA41EF009E7102 /* cssTag.swift */; };
 		9791BD5125A7C1C300EC074A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9791BD5025A7C1C300EC074A /* AppDelegate.swift */; };
-		9791BD5325A7C1C300EC074A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9791BD5225A7C1C300EC074A /* ViewController.swift */; };
 		9791BD5525A7C1C600EC074A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9791BD5425A7C1C600EC074A /* Assets.xcassets */; };
 		9791BD5825A7C1C600EC074A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9791BD5625A7C1C600EC074A /* Main.storyboard */; };
 		9791BD6425A7C1C700EC074A /* acme_drawTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9791BD6325A7C1C700EC074A /* acme_drawTests.swift */; };
 		9791BD6F25A7C1C700EC074A /* acme_drawUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9791BD6E25A7C1C700EC074A /* acme_drawUITests.swift */; };
+		9791BD8825A7C1FA00EC074A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9791BD8525A7C1F900EC074A /* ViewController.swift */; };
+		9791BD8925A7C1FA00EC074A /* propertyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9791BD8625A7C1F900EC074A /* propertyData.swift */; };
+		9791BD8A25A7C1FA00EC074A /* myView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9791BD8725A7C1F900EC074A /* myView.swift */; };
+		9791BD9625A7C21100EC074A /* CustomButtonRoadSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9791BD8E25A7C20600EC074A /* CustomButtonRoadSign.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,9 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		973476FC25AA41EF009E7102 /* cssTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cssTag.swift; sourceTree = "<group>"; };
 		9791BD4D25A7C1C300EC074A /* acme draw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "acme draw.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9791BD5025A7C1C300EC074A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9791BD5225A7C1C300EC074A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9791BD5425A7C1C600EC074A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9791BD5725A7C1C600EC074A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9791BD5925A7C1C600EC074A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +50,10 @@
 		9791BD6A25A7C1C700EC074A /* acme drawUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "acme drawUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9791BD6E25A7C1C700EC074A /* acme_drawUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = acme_drawUITests.swift; sourceTree = "<group>"; };
 		9791BD7025A7C1C700EC074A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9791BD8525A7C1F900EC074A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9791BD8625A7C1F900EC074A /* propertyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = propertyData.swift; sourceTree = "<group>"; };
+		9791BD8725A7C1F900EC074A /* myView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myView.swift; sourceTree = "<group>"; };
+		9791BD8E25A7C20600EC074A /* CustomButtonRoadSign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonRoadSign.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +105,13 @@
 			isa = PBXGroup;
 			children = (
 				9791BD5025A7C1C300EC074A /* AppDelegate.swift */,
-				9791BD5225A7C1C300EC074A /* ViewController.swift */,
+				9791BD8525A7C1F900EC074A /* ViewController.swift */,
+				9791BD8725A7C1F900EC074A /* myView.swift */,
+				9791BD8625A7C1F900EC074A /* propertyData.swift */,
+				973476FC25AA41EF009E7102 /* cssTag.swift */,
 				9791BD5425A7C1C600EC074A /* Assets.xcassets */,
 				9791BD5625A7C1C600EC074A /* Main.storyboard */,
+				9791BD8E25A7C20600EC074A /* CustomButtonRoadSign.swift */,
 				9791BD5925A7C1C600EC074A /* Info.plist */,
 				9791BD5A25A7C1C600EC074A /* acme_draw.entitlements */,
 			);
@@ -253,8 +265,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9791BD5325A7C1C300EC074A /* ViewController.swift in Sources */,
+				9791BD8A25A7C1FA00EC074A /* myView.swift in Sources */,
+				9791BD8825A7C1FA00EC074A /* ViewController.swift in Sources */,
 				9791BD5125A7C1C300EC074A /* AppDelegate.swift in Sources */,
+				9791BD8925A7C1FA00EC074A /* propertyData.swift in Sources */,
+				973476FD25AA41EF009E7102 /* cssTag.swift in Sources */,
+				9791BD9625A7C21100EC074A /* CustomButtonRoadSign.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +447,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gamerocketstudio.acme-draw";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -452,6 +469,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gamerocketstudio.acme-draw";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

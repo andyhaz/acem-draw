@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		973476FD25AA41EF009E7102 /* cssTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973476FC25AA41EF009E7102 /* cssTag.swift */; };
+		9734774D25AFAB5E009E7102 /* CustomTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9734774C25AFAB5E009E7102 /* CustomTableCell.swift */; };
 		9791BD5125A7C1C300EC074A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9791BD5025A7C1C300EC074A /* AppDelegate.swift */; };
 		9791BD5525A7C1C600EC074A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9791BD5425A7C1C600EC074A /* Assets.xcassets */; };
 		9791BD5825A7C1C600EC074A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9791BD5625A7C1C600EC074A /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		973476FC25AA41EF009E7102 /* cssTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cssTag.swift; sourceTree = "<group>"; };
+		9734774C25AFAB5E009E7102 /* CustomTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableCell.swift; sourceTree = "<group>"; };
 		9791BD4D25A7C1C300EC074A /* acme draw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "acme draw.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9791BD5025A7C1C300EC074A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9791BD5425A7C1C600EC074A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				9791BD8725A7C1F900EC074A /* myView.swift */,
 				9791BD8625A7C1F900EC074A /* propertyData.swift */,
 				973476FC25AA41EF009E7102 /* cssTag.swift */,
+				9734774C25AFAB5E009E7102 /* CustomTableCell.swift */,
 				9791BD5425A7C1C600EC074A /* Assets.xcassets */,
 				9791BD5625A7C1C600EC074A /* Main.storyboard */,
 				9791BD8E25A7C20600EC074A /* CustomButtonRoadSign.swift */,
@@ -271,6 +274,7 @@
 				9791BD8925A7C1FA00EC074A /* propertyData.swift in Sources */,
 				973476FD25AA41EF009E7102 /* cssTag.swift in Sources */,
 				9791BD9625A7C21100EC074A /* CustomButtonRoadSign.swift in Sources */,
+				9734774D25AFAB5E009E7102 /* CustomTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

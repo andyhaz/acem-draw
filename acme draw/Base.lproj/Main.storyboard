@@ -724,7 +724,7 @@
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn width="116" minWidth="40" maxWidth="1000" id="mCU-DQ-KvW">
+                                                <tableColumn width="218" minWidth="40" maxWidth="1000" id="mCU-DQ-KvW">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -736,12 +736,12 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView id="t6h-Aa-Zqb">
-                                                            <rect key="frame" x="1" y="1" width="116" height="42"/>
+                                                        <tableCellView identifier="layerCell_id" id="t6h-Aa-Zqb" customClass="CustomTableCell" customModule="acme_draw" customModuleProvider="target">
+                                                            <rect key="frame" x="1" y="1" width="218" height="42"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rhX-I2-P7d">
-                                                                    <rect key="frame" x="0.0" y="13" width="116" height="16"/>
+                                                                    <rect key="frame" x="0.0" y="13" width="313" height="16"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="ybx-bf-lty">
                                                                         <font key="font" usesAppearanceFont="YES"/>
@@ -751,12 +751,16 @@
                                                                 </textField>
                                                             </subviews>
                                                             <connections>
-                                                                <outlet property="textField" destination="rhX-I2-P7d" id="E2p-Mo-syX"/>
+                                                                <outlet property="layerViewCell" destination="rhX-I2-P7d" id="YWp-iD-ioC"/>
                                                             </connections>
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
+                                            <connections>
+                                                <outlet property="dataSource" destination="XfG-lQ-9wD" id="dAR-5D-WCh"/>
+                                                <outlet property="delegate" destination="XfG-lQ-9wD" id="YgP-nW-qjw"/>
+                                            </connections>
                                         </tableView>
                                     </subviews>
                                 </clipView>

@@ -8,12 +8,12 @@
 import Cocoa
 import Foundation
 
-class ViewController: NSViewController  {
+class ViewController: NSViewController,  NSTableViewDelegate, NSTableViewDataSource   {
     @IBOutlet weak var myView: myView!
     @IBOutlet weak var sizeVaulOutlet: NSSlider!
     @IBOutlet weak var roundValOutlet: NSSlider!
     
-  
+    let layerTable = ["list 1","list 2", "list 3"]
     
     lazy var window: NSWindow = self.view.window!
     var mouseLocation: NSPoint { NSEvent.mouseLocation }
@@ -139,6 +139,23 @@ class ViewController: NSViewController  {
         }
       }
 */
+//table view events
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return layerTable.count
+    }
+    
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        
+        let item = (layerTable)[row]
+        
+
+        let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "layerCell_id"), owner: self) as? CustomTableCell
+        
+        cell?.layerViewCell.stringValue = item
+        
+        return cell
+    }
+//end tableview events
     
     @IBAction func boradrSlide(_ sender: Any) {
         let lastAry = acmeData.count - 1

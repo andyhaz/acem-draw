@@ -9,11 +9,15 @@ import Cocoa
 import Foundation
 
 class ViewController: NSViewController,  NSTableViewDelegate, NSTableViewDataSource   {
+
+    @IBOutlet weak var tableView: NSTableView!
+
+    
     @IBOutlet weak var myView: myView!
     @IBOutlet weak var sizeVaulOutlet: NSSlider!
     @IBOutlet weak var roundValOutlet: NSSlider!
     
-    let layerTable = ["list 1","list 2", "list 3"]
+    var layerTable = [String]()
     
     lazy var window: NSWindow = self.view.window!
     var mouseLocation: NSPoint { NSEvent.mouseLocation }
@@ -28,6 +32,10 @@ class ViewController: NSViewController,  NSTableViewDelegate, NSTableViewDataSou
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+      
       // ct.cssData()
       //  ct.css_rect()
       //  ct.convetCssStringToHtml()
@@ -61,6 +69,7 @@ class ViewController: NSViewController,  NSTableViewDelegate, NSTableViewDataSou
     override func viewWillAppear() {
         super.viewWillAppear()
         window.acceptsMouseMovedEvents = true
+       // tableView.reloadData()
     }
     
     override var representedObject: Any? {
@@ -81,6 +90,10 @@ class ViewController: NSViewController,  NSTableViewDelegate, NSTableViewDataSou
         case 1:
             let pd = propertyData(mlx:mLocx, mly:mLocy, rw:0, rh:0, rs: 0, rr: 0)
             acmeData.append(pd)
+            
+            let strNewLayer = "layer"
+            layerTable.append(strNewLayer)
+            self.tableView.reloadData()//
         break
         case 2:
             self.renderView()

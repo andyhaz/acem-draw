@@ -9,7 +9,7 @@ import Cocoa
 
 class CustomTableCell: NSTableCellView {
 
-    
+
     
     @IBOutlet weak var layerViewCell: NSTextField!
     

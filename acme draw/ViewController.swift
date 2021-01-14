@@ -64,6 +64,7 @@ class ViewController: NSViewController,  NSTableViewDelegate, NSTableViewDataSou
         }*/
         myView.viewData = acmeData
         myView.display()
+        self.tableView.reloadData()//
     }
     
     override func viewWillAppear() {
@@ -91,9 +92,9 @@ class ViewController: NSViewController,  NSTableViewDelegate, NSTableViewDataSou
             let pd = propertyData(mlx:mLocx, mly:mLocy, rw:0, rh:0, rs: 0, rr: 0)
             acmeData.append(pd)
             
-            let strNewLayer = "layer"
+            let strNewLayer = String(format: "Layer %d", acmeData.count)//add text to layer with last part of the data count
             layerTable.append(strNewLayer)
-            self.tableView.reloadData()//
+           
         break
         case 2:
             self.renderView()

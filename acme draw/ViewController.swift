@@ -16,17 +16,18 @@ class ViewController: NSViewController,  NSTableViewDelegate, NSTableViewDataSou
     @IBOutlet weak var myView: myView!
     @IBOutlet weak var sizeVaulOutlet: NSSlider!
     @IBOutlet weak var roundValOutlet: NSSlider!
-    
+
     var layerTable = [String]()
     
     lazy var window: NSWindow = self.view.window!
     var mouseLocation: NSPoint { NSEvent.mouseLocation }
     var location: NSPoint { window.mouseLocationOutsideOfEventStream }
     
-    let ct = cssTag()
  // var mouseToggle = false
     var acmeData =  [NSObject]()//setup memory
+    var acmeSelect = NSObject.self
     var mouseCount = 0
+    var aryTableSelect = 0
   //  var Locx = 0
   //  var Locy = 0
 
@@ -36,6 +37,7 @@ class ViewController: NSViewController,  NSTableViewDelegate, NSTableViewDataSou
         self.tableView.delegate = self
         self.tableView.dataSource = self
       
+    //   print("myView",myView.bounds.width)
       // ct.cssData()
       //  ct.css_rect()
       //  ct.convetCssStringToHtml()
@@ -79,7 +81,6 @@ class ViewController: NSViewController,  NSTableViewDelegate, NSTableViewDataSou
         }
     }//
 
-
     override func mouseDown(with event: NSEvent) {
         let event_location = event.locationInWindow
         let mLocx = Float(event_location.x)
@@ -94,23 +95,23 @@ class ViewController: NSViewController,  NSTableViewDelegate, NSTableViewDataSou
             
             let strNewLayer = String(format: "Layer %d", acmeData.count)//add text to layer with last part of the data count
             layerTable.append(strNewLayer)
-           
         break
         case 2:
-            self.renderView()
             print("case 2")
+            self.renderView()
             mouseCount = 0
         break
         default: break
             
         }
         //pass to css
-        ct.csr.cssLocx = Int(mLocx)
-        ct.csr.cssLocy = Int(mLocy)
+      //  ct.csr.cssLocx = Int(mLocx)
+      //  ct.csr.cssLocy = Int(mLocy)
 
         self.renderView()
       //  print("myview",mLocx,mLocx)
     }
+
     
     override func mouseMoved(with event: NSEvent) {
         if (mouseCount == 1){
@@ -134,25 +135,8 @@ class ViewController: NSViewController,  NSTableViewDelegate, NSTableViewDataSou
     }//end
     
     override func mouseUp(with event: NSEvent) {
-        print(acmeData)
+      //  print(acmeData)
     }
-/*
-    override func mouseMoved(with event: NSEvent) {
-       // var Locx2 = 0
-       // var Locy2 = 0
-        
-        if (mouseCount == 1){
-            let event_location = event.locationInWindow
-            let mLocx = Float(event_location.x)
-            let mLocy = Float(event_location.y)
-            print("Mouse moved 1",mLocx,mLocy)
-            
-        //  myView.myw = mLocx
-        //  myView.myh = mLocy
-          myView.updateDisplay()
-        }
-      }
-*/
 //table view events
     func numberOfRows(in tableView: NSTableView) -> Int {
         return layerTable.count
@@ -169,22 +153,37 @@ class ViewController: NSViewController,  NSTableViewDelegate, NSTableViewDataSou
         
         return cell
     }
+    
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        updateTableSatus()
+    }
+    
+    func updateTableSatus(){
+        let itemsSelected = tableView.selectedRow
+        aryTableSelect = itemsSelected
+        //print(itemsSelected)
+    }
+    
 //end tableview events
     
     @IBAction func boradrSlide(_ sender: Any) {
-        let lastAry = acmeData.count - 1
-        let myBox = acmeData[lastAry]
+        let myBox = acmeData[aryTableSelect]
         let pd = myBox as? propertyData
         pd?.rectRound = roundValOutlet.floatValue
         self.renderView()
     }
     
     @IBAction func sizeSlide(_ sender: Any) {
-        let lastAry = acmeData.count - 1
-        let myBox = acmeData[lastAry]
+        let myBox = acmeData[aryTableSelect]
         let pd = myBox as? propertyData
         pd?.rectSize = sizeVaulOutlet.floatValue
         self.renderView()
+    }
+    @IBAction func exportCssAction(_ sender: Any) {
+        print("export css")
+        let ct = cssTag(rw:Float(myView.bounds.width), rh:Float(myView.bounds.height))
+        let newData = ct.convertToCSS(drawDataAry: acmeData)
+        print(newData)
     }
 }
 

@@ -21,6 +21,18 @@ class cssTag: NSObject {
     var csr = cssSetupRec()
     var cssLayerStr = [String]()
     var cssStyle = ""
+    
+  //  var drawData = [NSObject]()?? del ??
+    
+    var rectWidth: Float
+    var rectHeight: Float
+    
+    init(rw:Float, rh:Float) {
+        self.rectWidth = rw
+        self.rectHeight = rh
+        super.init()
+        print(rw,rh)
+    }
 
     func css_rect() {
         
@@ -80,5 +92,14 @@ class cssTag: NSObject {
         </html>
         """
         print("html:",html)
+    }
+//
+    func convertToCSS(drawDataAry:Array<NSObject>) -> Array<NSObject> {
+        
+        let newArrayObj = drawDataAry
+        //get data to convert
+              
+        
+        return newArrayObj
     }
 }//end

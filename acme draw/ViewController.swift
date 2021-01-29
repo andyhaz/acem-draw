@@ -111,7 +111,6 @@ class ViewController: NSViewController,  NSTableViewDelegate, NSTableViewDataSou
         self.renderView()
       //  print("myview",mLocx,mLocx)
     }
-
     
     override func mouseMoved(with event: NSEvent) {
         if (mouseCount == 1){
@@ -137,6 +136,7 @@ class ViewController: NSViewController,  NSTableViewDelegate, NSTableViewDataSou
     override func mouseUp(with event: NSEvent) {
       //  print(acmeData)
     }
+    
 //table view events
     func numberOfRows(in tableView: NSTableView) -> Int {
         return layerTable.count
@@ -179,11 +179,11 @@ class ViewController: NSViewController,  NSTableViewDelegate, NSTableViewDataSou
         pd?.rectSize = sizeVaulOutlet.floatValue
         self.renderView()
     }
+    
     @IBAction func exportCssAction(_ sender: Any) {
-        print("export css")
+    //    print("export css")
         let ct = cssTag(rw:Float(myView.bounds.width), rh:Float(myView.bounds.height))
         let newData = ct.convertToCSS(drawDataAry: acmeData)
         print(newData)
     }
 }
-

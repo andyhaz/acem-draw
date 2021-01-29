@@ -40,28 +40,29 @@ class cssTag: NSObject {
         
         cssStyle = String(format: "#layer%d { position: absolute;left:%d px;top:%d px;height:%d px;width:%d px;border: %dpx solid red;border-radius: %dpx; background-color: powderblue;z-index:%d;}",countStr,csr.cssLocx, csr.cssLocy, csr.cssHeight, csr.cssWidth,csr.cssBoard,csr.cssRadius, csr.csslocz )
         
-        
         cssLayerStr += [cssStyle]
         
         print(cssLayerStr)
     }
     
     func convetCssStringToHtml() {
-        let html:String = String(format:"""
-        <!DOCTYPE html>
-        <html>
-        <head>
-           <title> </title>
-           <style type="text/css" media="screen">
-            %@
-           </style>
-        </head>
-        <body>
-           <div id="layer1">Content here</div>
-        </body>
-        </html>
+        
+        let cssHead: String = String(format:"""
+        <style type="text/css" media="screen">%@</style>
         """,cssStyle)
+        
+        let divTag:String = """
+        <div id="layer1">Content here</div>
+"""
+        
+        let htmlBody:String = String(format:"""
+<!DOCTYPE html><html><head><title> </title>%@</head><body>%@</body></html>
+""",cssHead,divTag)
+        
+        let html:String = String(format: "%@ %@ %@", cssHead,divTag,htmlBody)
+        
         print("html:",html)
+        
     }
     
     
